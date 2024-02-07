@@ -465,11 +465,14 @@ a.underline:hover::before{
     border-top: 1px solid var(--lines-hover-color);
     display: flex;
 }
+.work-step:last-child{
+    margin-right: 0;
+}
 .work-step{
+    margin-right: 52px;
     width: 638px;
     height: 633px;
     color: var(--lines-hover-color);
-
 }
 .step-number{
     display: inline-block;
@@ -482,6 +485,7 @@ a.underline:hover::before{
     background-color: black
 }
 .work-step h4{
+    font-size: 36px;
     margin: 0;
     color: var(--lines-hover-color);
 }
