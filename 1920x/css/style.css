@@ -94,34 +94,7 @@ a.underline:hover::before{
     transform: scaleX(1);
 }
 
-/* 
-.arrow{
-    overflow: hidden;
-}
-.arrow ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    transform: translateX(-50%);
-    transition: ul 400ms ease, transform 400ms ease;
-}
-.arrow:hover ul{
-    transform: translateX(0);
-}
-.arrow li{
-    width: 80px;
-    height: 20px;
-}
-.arrow i{
-    font-size: 16px;
-    color: var(--white-color);
-    transition: color 400ms ease;
-    line-height: 38px;
-} */
-
 .arrows-wrapper{
-    /* float: right; */
     width: 22px;
     height: 22px;
     position: relative;
