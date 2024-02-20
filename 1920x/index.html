@@ -21,10 +21,10 @@
     <!-- FIRST KAMPELA SCREEN -->
     <div class="first-screen">
 
-      <!-- TOP MENU -->
-      <div id="fixed-menu">
+      <!-- TOP MENU FULL SCREEN-->
+      <div class="fixed-menu full-screen">
         <div class="left-container">
-          <img src="img/logo.svg" alt="logo" id="logo">
+          <img src="img/logo.svg" alt="logo" class="logo">
           <menu class="main-menu hmenu">
             <li><a href="#">[ FAQ ]</a></li>
             <li><a href="#">[ Delivery ]</a></li>
@@ -57,6 +57,33 @@
         </div>
       </div>
 
+
+      <!-- TOP MENU MOBILE-->
+      <input class="top-menu-switcher mobile" type="checkbox" id="top-menu-switcher" />
+      <div class="fixed-menu mobile">
+        <img src="img/logo.svg" alt="logo" class="logo">
+        <label class="hamb" for="top-menu-switcher">
+          <div class="top-menu-ctrl"></div>
+        </label>
+      </div>
+
+      <nav class="top-menu-overlay mobile">
+        <div>
+          <button class="order-button white"><a href="#">Order the devkit</a></button>
+          <menu class="main-menu hmenu">
+            <li><a href="#">[ FAQ ]</a></li>
+            <li><a href="#">[ Delivery ]</a></li>
+            <li><a href="#">[ About us ]</a></li>
+            <li><a href="#">[ Contact ]</a></li>
+          </menu>
+        </div>
+        <menu class="link-menu hmenu">
+          <li><a href="#" class="underline">Twitter</a></li>
+          <li><a href="#" class="underline">Matrix</a></li>
+          <li><a href="#" class="underline">Github</a></li>
+        </menu>
+      </nav>
+
       <div class="headline">
         <div class="description">Cold-Pressed<br>Signing <img src="img/lines-icon.png"></div>
         <h1 class="kampela-logo">Kampela</h1>
@@ -66,6 +93,7 @@
         <div id="starts-from"><a href="#" class="underline">Strats from 30 DOT</a></div>
       </div>
     </div>
+
 
     <!-- RUNNING TEXT LINE #1 -->
     <div class="running-text-line">
@@ -83,7 +111,7 @@
 
     <!-- ABOUT SCREEN -->
     <div id="about-screen">
-      <div class="kampela-img"></div>
+      <div class="kampela-img full-screen"></div>
       <div id="about-text-block-1">
         <span class="text-h3">Kampela took what other people were doing and squished out all the bullshit.</span>
         <div id="prop-list-container" class="text-large">
@@ -97,6 +125,7 @@
           </menu>
         </div>
       </div>
+      <div class="kampela-img mobile"><img src="img/kampela-mobile.png" alt="kampela"></div>
       <div id="about-text-block-2" class="text-h3">That is why it is so flat, like a flounder.</div>
     </div>
 
@@ -161,12 +190,17 @@
     <!-- CHECK-FEATURES SCREEN -->
     <div id='check-screen'>
       <img src="img/check-screen-kampela.png" alt="kampela">
-      <div id="check-block-1">Very good waterproofness -<br />no joints to fail</div>
-      <div id="check-block-2">Inherently produces e-waste at end of product life</div>
-      <div id="check-block-3">Never out of battery</div>
-      <div id="check-block-4">Almost the size of a standard bank card</div>
-      <div id="check-block-5">Stupid-resistant. We can’t protect you from yourself, but we’ve tried</div>
+      <div class="check-blocks">
+        <div id="check-block-1" class="check-block">Very good waterproofness -<br />no joints to fail</div>
+        <div id="check-block-2" class="check-block">Inherently produces e-waste at end of product life</div>
+        <div id="check-block-3" class="check-block">Never out of battery</div>
+        <div id="check-block-4" class="check-block">Almost the size of a standard bank card</div>
+        <div id="check-block-5" class="check-block">Stupid-resistant. We can’t protect you from yourself, but we’ve
+          tried</div>
+      </div>
+      <button class="order-button mobile"><a href="#">Order the devkit</a></button>
     </div>
+
 
 
     <!-- HOW IT WORKS -->
@@ -253,7 +287,7 @@
             <a href="#"><img src="img/arrow-right.png" alt="next quote"></a>
           </div>
         </div>
-        <div class="quote text-h1">They go into security as if they were completely paranoid...The device is truly
+        <div class="quote text-h1">They go into security as if they were completely paranoid... The device is truly
           amazing!</div>
         <div class="author text-large">
           <img src="img/avatar.png" alt="quote-author-avatar">
@@ -311,22 +345,22 @@
 
 
     <!-- FOOTER  -->
-    <div id="footer">
+    <div class="footer full-screen">
       <div class="left-container flex-col">
         <div class="logo flex-col">
-          <div id="footer-kampela" class="kampela-logo">kampela</div>
+          <div class="footer-kampela kampela-logo">kampela</div>
           <div class="subtitle text-small">Designed in Finland | Funded by Polkadot Treasury</div>
         </div>
-        <div id="copyrights" class="text-small">
+        <div class="copyrights text-small">
           <span>Alzymologist Oy, 2024</span>
-          <menu id="terms-policy" class="hmenu">
+          <menu class="terms-policy hmenu">
             <li><a href="#">Terms & Conditions</a></li>
             <li><a href="#">Privicy Policy</a></li>
           </menu>
         </div>
       </div>
       <div class="right-container flex-col">
-        <menu id="footer-top-menu" class="main-menu hmenu">
+        <menu class="main-menu hmenu">
           <li><a href="#">[ FAQ ]</a></li>
           <li><a href="#">[ Delivery ]</a></li>
           <li><a href="#">[ About us ]</a></li>
@@ -354,8 +388,39 @@
             </a></li>
         </menu>
       </div>
-    </div>
+    </div> <!-- footer full-screen -->
 
+    <div class="footer mobile">
+
+      <div class="top-container">
+        <div class="logo">
+          <div class="footer-kampela kampela-logo">kampela</div>
+          <div class="subtitle text-medium">Designed in Finland | Funded by Polkadot Treasury</div>
+        </div>
+        <menu class="main-menu hmenu">
+          <li><a href="#">[ FAQ ]</a></li>
+          <li><a href="#">[ Delivery ]</a></li>
+          <li><a href="#">[ About us ]</a></li>
+          <li><a href="#">[ Contact ]</a></li>
+        </menu>
+      </div> <!-- top-container -->
+
+      <div class="bottom-container">
+        <menu class="link-menu hmenu">
+          <li><a href="#" class="underline">Twitter</a></li>
+          <li><a href="#" class="underline">Matrix</a></li>
+          <li><a href="#" class="underline">Github</a></li>
+        </menu>
+        <div class="copyrights text-small">
+          <div>Alzymologist Oy, 2024</div>
+          <menu class="terms-policy hmenu">
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privicy Policy</a></li>
+          </menu>
+        </div>
+      </div> <!-- bottom-container -->
+
+    </div> <!-- footer mobile -->
 
   </div>
 
