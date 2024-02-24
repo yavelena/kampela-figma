@@ -11,6 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
   <title>Kampela</title>
 </head>
 
@@ -22,15 +23,15 @@
     <div class="first-screen">
 
       <!-- TOP MENU FULL SCREEN-->
-      <div class="fixed-menu full-screen">
+      <section class="fixed-menu full-screen section">
         <div class="left-container">
           <img src="img/logo.svg" alt="logo" class="logo">
-          <menu class="main-menu hmenu">
-            <li><a href="#">[ FAQ ]</a></li>
-            <li><a href="#">[ Delivery ]</a></li>
-            <li><a href="#">[ About us ]</a></li>
-            <li><a href="#">[ Contact ]</a></li>
-          </menu>
+          <nav class="main-menu hmenu">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+          </nav>
         </div>
         <div class="right-container">
           <menu class="link-menu hmenu">
@@ -55,7 +56,7 @@
           </menu>
           <button class="order-button"><a href="#">Order the devkit</a></button>
         </div>
-      </div>
+      </section>
 
 
       <!-- TOP MENU MOBILE-->
@@ -67,14 +68,14 @@
         </label>
       </div>
 
-      <nav class="top-menu-overlay mobile">
+      <nav class="top-menu-overlay mobile .section">
         <div>
           <button class="order-button white"><a href="#">Order the devkit</a></button>
           <menu class="main-menu hmenu">
-            <li><a href="#">[ FAQ ]</a></li>
-            <li><a href="#">[ Delivery ]</a></li>
-            <li><a href="#">[ About us ]</a></li>
-            <li><a href="#">[ Contact ]</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
           </menu>
         </div>
         <menu class="link-menu hmenu">
@@ -118,8 +119,6 @@
           <menu class="prop-list">
             <li>no bluetooth</li>
             <li>no ports</li>
-          </menu>
-          <menu class="prop-list">
             <li>no battery</li>
             <li>no wi-fi</li>
           </menu>
@@ -152,7 +151,7 @@
     <!-- FEATURES SCREEN -->
     <div id="features-screen">
       <h2>Every device design<br>requires compromises.<br>Ours include:</h2>
-      <div id="features-container">
+      <div id="features-container" class="scrollable-full-screen">
         <div class="feature-block border-container">
           <div class="feature-text">
             <h4>Cryptographic Strongbox</h4>
@@ -190,7 +189,7 @@
     <!-- CHECK-FEATURES SCREEN -->
     <div id='check-screen'>
       <img src="img/check-screen-kampela.png" alt="kampela">
-      <div class="check-blocks">
+      <div class="check-blocks scrollable-mobile">
         <div id="check-block-1" class="check-block">Very good waterproofness -<br />no joints to fail</div>
         <div id="check-block-2" class="check-block">Inherently produces e-waste at end of product life</div>
         <div id="check-block-3" class="check-block">Never out of battery</div>
@@ -300,27 +299,27 @@
     <div id="kampela-in-press">
       <h2>Kampela in the Press</h2>
       <div id="press-container">
-        <div class="press-block border-container">
+        <article class="press-block border-container">
           <div class="press-item-title">
             <h4>Kampela: Bridging Security and Simplicity in the Substrate Ecosystem</h4>
             <div class="press-item-date text-small">Nov 2, 2023</div>
           </div>
           <div class="press-item-link"><a href="#" class="text-medium underline">www.theastarbulletin.news</a></div>
-        </div>
-        <div class="press-block border-container">
+        </article>
+        <article class="press-block border-container">
           <div class="press-item-title">
             <h4>Kampela in Action: Transaction Signing and Firmware Updates | Sub0 2023</h4>
             <div class="press-item-date text-small">Sep 22, 2023</div>
           </div>
           <div class="press-item-link"><a href="#" class="text-medium underline">www.youtube.com</a></div>
-        </div>
-        <div class="press-block border-container">
+        </article>
+        <article class="press-block border-container">
           <div class="press-item-title">
             <h4>The Generic Polkadot Ledger App Proposal Aug 3, 2023</h4>
             <div class="press-item-date text-small">Aug 3, 2023</div>
           </div>
           <div class="press-item-link"><a href="#" class="text-medium underline">www.zondax.ch</a></div>
-        </div>
+        </article>
 
       </div>
     </div>
@@ -344,83 +343,50 @@
     </div>
 
 
-    <!-- FOOTER  -->
-    <div class="footer full-screen">
-      <div class="left-container flex-col">
-        <div class="logo flex-col">
-          <div class="footer-kampela kampela-logo">kampela</div>
-          <div class="subtitle text-small">Designed in Finland | Funded by Polkadot Treasury</div>
-        </div>
-        <div class="copyrights text-small">
-          <span>Alzymologist Oy, 2024</span>
-          <menu class="terms-policy hmenu">
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privicy Policy</a></li>
-          </menu>
-        </div>
+    <footer>
+      <div class="logo">
+        <div class="footer-kampela kampela-logo">kampela</div>
+        <div class="subtitle text-small">Designed in Finland | Funded by Polkadot Treasury</div>
       </div>
-      <div class="right-container flex-col">
-        <menu class="main-menu hmenu">
-          <li><a href="#">[ FAQ ]</a></li>
-          <li><a href="#">[ Delivery ]</a></li>
-          <li><a href="#">[ About us ]</a></li>
-          <li><a href="#">[ Contact ]</a></li>
-        </menu>
 
-        <menu class="link-menu hmenu">
-          <li><a href="#" class="underline">Twitter
-              <div class="arrows-wrapper">
-                <div class="arrow top"></div>
-                <div class="arrow bottom"></div>
-              </div>
-            </a></li>
-          <li><a href="#" class="underline">Matrix
-              <div class="arrows-wrapper">
-                <div class="arrow top"></div>
-                <div class="arrow bottom"></div>
-              </div>
-            </a></li>
-          <li><a href="#" class="underline">Github
-              <div class="arrows-wrapper">
-                <div class="arrow top"></div>
-                <div class="arrow bottom"></div>
-              </div>
-            </a></li>
+      <menu class="main-menu hmenu">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Delivery</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact</a></li>
+      </menu>
+
+      <menu class="link-menu hmenu">
+        <li><a href="#" class="underline">Twitter
+            <div class="arrows-wrapper">
+              <div class="arrow top"></div>
+              <div class="arrow bottom"></div>
+            </div>
+          </a></li>
+        <li><a href="#" class="underline">Matrix
+            <div class="arrows-wrapper">
+              <div class="arrow top"></div>
+              <div class="arrow bottom"></div>
+            </div>
+          </a></li>
+        <li><a href="#" class="underline">Github
+            <div class="arrows-wrapper">
+              <div class="arrow top"></div>
+              <div class="arrow bottom"></div>
+            </div>
+          </a></li>
+      </menu>
+
+
+      <div class="copyrights text-small">
+        <span>Alzymologist Oy, 2024</span>
+        <menu id="terms-policy" class="hmenu">
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privicy Policy</a></li>
         </menu>
       </div>
-    </div> <!-- footer full-screen -->
 
-    <div class="footer mobile">
-
-      <div class="top-container">
-        <div class="logo">
-          <div class="footer-kampela kampela-logo">kampela</div>
-          <div class="subtitle text-medium">Designed in Finland | Funded by Polkadot Treasury</div>
-        </div>
-        <menu class="main-menu hmenu">
-          <li><a href="#">[ FAQ ]</a></li>
-          <li><a href="#">[ Delivery ]</a></li>
-          <li><a href="#">[ About us ]</a></li>
-          <li><a href="#">[ Contact ]</a></li>
-        </menu>
-      </div> <!-- top-container -->
-
-      <div class="bottom-container">
-        <menu class="link-menu hmenu">
-          <li><a href="#" class="underline">Twitter</a></li>
-          <li><a href="#" class="underline">Matrix</a></li>
-          <li><a href="#" class="underline">Github</a></li>
-        </menu>
-        <div class="copyrights text-small">
-          <div>Alzymologist Oy, 2024</div>
-          <menu class="terms-policy hmenu">
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privicy Policy</a></li>
-          </menu>
-        </div>
-      </div> <!-- bottom-container -->
-
-    </div> <!-- footer mobile -->
+    </footer>
 
   </div>
 
