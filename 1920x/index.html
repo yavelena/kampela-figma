@@ -18,6 +18,31 @@
 <body>
   <div class="container">
 
+    <!-- TOP MENU MOBILE VERSION-->
+    <input class="top-menu-switcher mobile" type="checkbox" id="top-menu-switcher" />
+      <div class="fixed-menu mobile">
+        <img src="img/logo.svg" alt="logo" class="logo">
+        <label class="hamb" for="top-menu-switcher">
+          <div class="top-menu-ctrl"></div>
+        </label>
+      </div>
+
+      <nav class="top-menu-overlay mobile ">
+        <div>
+          <button class="order-button white"><a href="#">Order the devkit</a></button>
+          <menu class="main-menu hmenu">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+          </menu>
+        </div>
+        <menu class="link-menu hmenu">
+          <li><a href="#" class="underline">Twitter</a></li>
+          <li><a href="#" class="underline">Matrix</a></li>
+          <li><a href="#" class="underline">Github</a></li>
+        </menu>
+      </nav> 
 
     <!-- FIRST KAMPELA SCREEN -->
     <div class="first-screen">
@@ -59,32 +84,8 @@
       </section>
 
 
-      <!-- TOP MENU MOBILE-->
-      <input class="top-menu-switcher mobile" type="checkbox" id="top-menu-switcher" />
-      <div class="fixed-menu mobile">
-        <img src="img/logo.svg" alt="logo" class="logo">
-        <label class="hamb" for="top-menu-switcher">
-          <div class="top-menu-ctrl"></div>
-        </label>
-      </div>
-
-      <nav class="top-menu-overlay mobile .section">
-        <div>
-          <button class="order-button white"><a href="#">Order the devkit</a></button>
-          <menu class="main-menu hmenu">
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Delivery</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact</a></li>
-          </menu>
-        </div>
-        <menu class="link-menu hmenu">
-          <li><a href="#" class="underline">Twitter</a></li>
-          <li><a href="#" class="underline">Matrix</a></li>
-          <li><a href="#" class="underline">Github</a></li>
-        </menu>
-      </nav>
-
+      
+      <!-- FIRST SCREEN CONTENT-->
       <div class="headline">
         <div class="description">Cold-Pressed<br>Signing <img src="img/lines-icon.png"></div>
         <h1 class="kampela-logo">Kampela</h1>
@@ -232,7 +233,7 @@
         <a href="#" class="text-medium underline">from €10</a>
       </div>
 
-      <div id="price-container">
+      <div id="price-container" class="scrollable-full-screen">
         <div class="product border-container">
           <div class="available">available<br />now</div>
           <div class="title">
