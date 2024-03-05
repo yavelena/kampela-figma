@@ -25,6 +25,7 @@ function CustomScroll(){
         
     } 
     else {
+        // alert("mobile");
 
         for (let i = 0; i < nodeList_fullscreen.length; i++){
             nodeList_fullscreen[i].removeEventListener("mousewheel", ScrollH, false);
@@ -48,5 +49,9 @@ window.addEventListener('resize', function(event) {
     // alert('New size: ' + window.innerWidth);
     CustomScroll();
 }, true);
+
+
+
+
 
 

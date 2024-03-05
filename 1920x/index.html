@@ -19,7 +19,7 @@
   <div class="container">
 
     <!-- TOP MENU MOBILE VERSION-->
-    <input class="top-menu-switcher mobile" type="checkbox" id="top-menu-switcher" />
+    <input class="mobile" type="checkbox" id="top-menu-switcher" />
       <div class="fixed-menu mobile">
         <img src="img/logo.svg" alt="logo" class="logo">
         <label class="hamb" for="top-menu-switcher">
@@ -27,7 +27,7 @@
         </label>
       </div>
 
-      <nav class="top-menu-overlay mobile ">
+      <nav class="top-menu-overlay mobile">
         <div>
           <button class="order-button white"><a href="#">Order the devkit</a></button>
           <menu class="main-menu hmenu">
@@ -153,7 +153,7 @@
     <div id="features-screen">
       <h2>Every device design<br>requires compromises.<br>Ours include:</h2>
       <div id="features-container" class="scrollable-full-screen">
-        <div class="feature-block border-container">
+        <div class="feature-block border-container flex-col">
           <div class="feature-text">
             <h4>Cryptographic Strongbox</h4>
             <p>Once seen during initial setup, your seed phrase will never get exposed by Kampela in any way, while
@@ -161,14 +161,14 @@
           </div>
           <img class="feature-picture" src="img/features/crypto-strongbox.jpg" alt="">
         </div>
-        <div class="feature-block border-container">
+        <div class="feature-block border-container flex-col">
           <div class="feature-text">
             <h4>Transparent in Its Core</h4>
             <p></p>
           </div>
           <img class="feature-picture" src="img/features/transparent.jpg" alt="">
         </div>
-        <div class="feature-block border-container">
+        <div class="feature-block border-container  flex-col">
           <div class="feature-text">
             <h4>e-Ink Display</h4>
             <p>Once seen during initial setup, your seed phrase will never get exposed by Kampela in any way, while
@@ -176,7 +176,7 @@
           </div>
           <img class="feature-picture" src="img/features/eink.jpg" alt="">
         </div>
-        <div class="feature-block border-container">
+        <div class="feature-block border-container  flex-col">
           <div class="feature-text">
             <h4>Cryptographic Strongbox</h4>
             <p class="text-large">Once seen during initial setup, your seed phrase will never get exposed by Kampela in
@@ -234,11 +234,59 @@
       </div>
 
       <div id="price-container" class="scrollable-full-screen">
-        <div class="product border-container">
+        <div id="devkit-price" class="product border-container flex-col">
           <div class="available">available<br />now</div>
           <div class="title">
             <h4>Kampela Devkit</h4>
-            <a href="#" class="text-small underline">Specifications</a>
+            <a href="#devkit-spec" class="text-small underline">Specifications</a>
+          </div>
+          <div id="devkit-spec" class="specifications pop-up flex-col">
+            <div class="spec-header">
+              <div>
+                <span class="text-small">Technical Specifications</span>
+                <h3>Kampela Devkit</h3>
+              </div>  
+              <a href="#devkit-price"><div class="pop-up-close-btn"></div></a>
+            </div>
+            <div class="spec-body">
+              <table>
+                <tr>
+                  <td>Size</td>
+                  <td>62.39 x 17.40 x 8.24</td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td>53g</td>
+                </tr>
+                <tr>
+                  <td>Color</td>
+                  <td>Transparent</td>
+                </tr>
+                <tr>
+                  <td>Material</td>
+                  <td>Plastic, metal</td>
+                </tr>
+                <tr>
+                  <td>Connector</td>
+                  <td>USB Type-C</td>
+                </tr>
+                <tr>
+                  <td>Chips</td>
+                  <td>ST33K1M5</td>
+                </tr>
+                <tr>
+                  <td>Compatibility</td>
+                  <td>64-bits desktop computers: Windows 10/11, macOs, Ubuntu LTS 20.4 / 22.04</td>
+                </tr>
+                <tr>
+                  <td>Box contents</td>
+                  <td>1 Kampela, 1 USB-C to USB-A cable, 1 getting started leaflet</td>
+                </tr>
+              </table>
+            </div>
+            <div class="spec-footer">
+              <button class="order-button"><a href="#">Order the devkit</a></button>
+            </div>
           </div>
           <img src="img/prices/kampela-devkit.png" alt="Kampela Devkit">
           <div class="price-order">
@@ -246,10 +294,58 @@
             <button class="order-button"><a href="#">Order the devkit</a></button>
           </div>
         </div>
-        <div class="product border-container">
+        <div id="kampela-price" class="product border-container flex-col">
           <div class="title">
             <h4>Kampela</h4>
-            <a href="#" class="text-small underline">Specifications</a>
+            <a href="#kampela-spec" class="text-small underline">Specifications</a>
+          </div>
+          <div id="kampela-spec" class="specifications pop-up flex-col">
+            <div class="spec-header">
+              <div>
+                <span class="text-small">Technical Specifications</span>
+                <h3>Kampela</h3>
+              </div>  
+              <a href="#kampela-price"><div class="pop-up-close-btn"></div></a>
+            </div>
+            <div class="spec-body">
+              <table>
+                <tr>
+                  <td>Size</td>
+                  <td>62.39 x 17.40 x 8.24</td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td>53g</td>
+                </tr>
+                <tr>
+                  <td>Color</td>
+                  <td>Transparent</td>
+                </tr>
+                <tr>
+                  <td>Material</td>
+                  <td>Plastic, metal</td>
+                </tr>
+                <tr>
+                  <td>Connector</td>
+                  <td>USB Type-C</td>
+                </tr>
+                <tr>
+                  <td>Chips</td>
+                  <td>ST33K1M5</td>
+                </tr>
+                <tr>
+                  <td>Compatibility</td>
+                  <td>64-bits desktop computers: Windows 10/11, macOs, Ubuntu LTS 20.4 / 22.04</td>
+                </tr>
+                <tr>
+                  <td>Box contents</td>
+                  <td>1 Kampela, 1 USB-C to USB-A cable, 1 getting started leaflet</td>
+                </tr>
+              </table>
+            </div>
+            <div class="spec-footer">
+              <button class="order-button"><a href="#">Order the devkit</a></button>
+            </div>
           </div>
           <img src="img/prices/kampela.png" alt="Kampela">
           <div class="price-order">
@@ -257,10 +353,58 @@
             <button class="order-button white"><a href="#">Preorder</a></button>
           </div>
         </div>
-        <div class="product border-container">
+        <div id="kampela-x2-price" class="product border-container flex-col">
           <div class="title">
             <h4>Kampela x 2</h4>
-            <a href="#" class="text-small underline">Specifications</a>
+            <a href="#kampela-x2-spec" class="text-small underline">Specifications</a>
+          </div>
+          <div id="kampela-x2-spec" class="specifications pop-up flex-col">
+            <div class="spec-header">
+              <div>
+                <span class="text-small">Technical Specifications</span>
+                <h3>Kampela x 2</h3>
+              </div>  
+              <a href="#kampela-x2-price"><div class="pop-up-close-btn"></div></a>
+            </div>
+            <div class="spec-body">
+              <table>
+                <tr>
+                  <td>Size</td>
+                  <td>62.39 x 17.40 x 8.24</td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td>53g</td>
+                </tr>
+                <tr>
+                  <td>Color</td>
+                  <td>Transparent</td>
+                </tr>
+                <tr>
+                  <td>Material</td>
+                  <td>Plastic, metal</td>
+                </tr>
+                <tr>
+                  <td>Connector</td>
+                  <td>USB Type-C</td>
+                </tr>
+                <tr>
+                  <td>Chips</td>
+                  <td>ST33K1M5</td>
+                </tr>
+                <tr>
+                  <td>Compatibility</td>
+                  <td>64-bits desktop computers: Windows 10/11, macOs, Ubuntu LTS 20.4 / 22.04</td>
+                </tr>
+                <tr>
+                  <td>Box contents</td>
+                  <td>1 Kampela, 1 USB-C to USB-A cable, 1 getting started leaflet</td>
+                </tr>
+              </table>
+            </div>
+            <div class="spec-footer">
+              <button class="order-button"><a href="#">Order the devkit</a></button>
+            </div>
           </div>
           <img src="img/prices/kampelax2.png" alt="Kampela x 2">
           <div class="price-order">
@@ -300,21 +444,21 @@
     <div id="kampela-in-press">
       <h2>Kampela in the Press</h2>
       <div id="press-container">
-        <article class="press-block border-container">
+        <article class="press-block border-container flex-col">
           <div class="press-item-title">
             <h4>Kampela: Bridging Security and Simplicity in the Substrate Ecosystem</h4>
             <div class="press-item-date text-small">Nov 2, 2023</div>
           </div>
           <div class="press-item-link"><a href="#" class="text-medium underline">www.theastarbulletin.news</a></div>
         </article>
-        <article class="press-block border-container">
+        <article class="press-block border-container flex-col">
           <div class="press-item-title">
             <h4>Kampela in Action: Transaction Signing and Firmware Updates | Sub0 2023</h4>
             <div class="press-item-date text-small">Sep 22, 2023</div>
           </div>
           <div class="press-item-link"><a href="#" class="text-medium underline">www.youtube.com</a></div>
         </article>
-        <article class="press-block border-container">
+        <article class="press-block border-container flex-col">
           <div class="press-item-title">
             <h4>The Generic Polkadot Ledger App Proposal Aug 3, 2023</h4>
             <div class="press-item-date text-small">Aug 3, 2023</div>

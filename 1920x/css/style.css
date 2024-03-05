@@ -367,7 +367,6 @@ section, .section{
     column-gap: 3.25rem;
     row-gap: 1rem;
     grid-template-columns: 1fr 1fr;
-    /* margin-right: 2.7vw; */
 }
 .prop-list li{
     display: inline-block;
@@ -411,9 +410,6 @@ section, .section{
 .feature-block{
     min-width: 33rem;
     min-height: 34vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 .feature-block p{
     color: var(--link-hover-color);
@@ -487,7 +483,6 @@ section, .section{
 }
 .work-step{
     width: 33.2vw;
-    /* height: 33vw; */
     color: var(--lines-hover-color);
 }
 .step-number{
@@ -546,10 +541,6 @@ section, .section{
     width: 30vw;
     min-width: 30rem;
     min-height: 743px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
 }
 .available {
     position: absolute;
@@ -635,9 +626,6 @@ section, .section{
 .press-block{
     width:30vw;
     min-height: 403px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 .press-item-date{
     color: var(--link-hover-color);
@@ -776,6 +764,38 @@ footer .link-menu{grid-area: link-menu;}
     .text-medium{font-size: 0.875rem; line-height: 120%;}   /* 14px */
     .text-large{font-size: 1rem; line-height: 120%;}
 
+    .pop-up{
+        /* display: none; */
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+        background-color: var(--backgrnd-color);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease-in-out;
+    }
+    .pop-up:target{
+        visibility: visible;
+        opacity: 1;
+    }
+    .pop-up_switcher{
+        display: none;
+    }
+    .pop-up-close-btn{
+        height: 2.5rem;
+        width: 2.5rem;
+        border: 1px solid white;
+        border-radius: 50%;
+        background: url('../img/menu-close.svg') center no-repeat;
+        cursor: pointer;
+        transition: opacity .3s;
+    }
+    
+    
     .first-screen{
         min-height: 95vh;
         min-height: 95svh;
@@ -807,29 +827,28 @@ footer .link-menu{grid-area: link-menu;}
     .top-menu-ctrl{
         height: 9vw;
         width: 9vw;
-        border: none;
-        background: url('../img/menu.svg') center no-repeat;
-        background-size: 9vw;
+        /* border: none; */
+        background: url('../img/menu.png') center no-repeat;
+        /* background-size: 9vw; */
         cursor: pointer;
-    }
-    .top-menu-overlay{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: fixed;
-        z-index: 100;
-        top: calc(9vw + 1.5rem);
-        left: 0;
-        width: 100vw;
-        min-height: calc(100vh - 9vw - 1.5rem);
-        padding: 2rem 1rem;
-        background-color: var(--backgrnd-color);
     }
     .top-menu-overlay{
         opacity: 0;
         visibility: hidden;
         transition: opacity .3s ease-out;
-    } 
+        position: fixed;
+        z-index: 50;
+        top: calc(9vw + 1.5rem);
+        left: 0;
+        width: 100vw;
+        overflow-y: auto;
+        background-color: var(--backgrnd-color);
+        padding: 2rem 1rem;
+        min-height: calc(100vh - 9vw - 1.5rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
     #top-menu-switcher {
         display: none;
     } 
@@ -851,8 +870,7 @@ footer .link-menu{grid-area: link-menu;}
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 48px;
-        margin-bottom: 20vh;
+        gap: 5vh;
     }
     .top-menu-overlay .main-menu li{font-size: 1.5rem;}
     
@@ -1048,6 +1066,40 @@ footer .link-menu{grid-area: link-menu;}
     }
     .price-order .price{
         font-size: 12vw;
+    }
+    .specifications{
+        padding: 1rem;
+        display: flex;
+    }
+    .spec-header{
+        display: flex;
+        justify-content: space-between;
+        height: 2.5rem;
+    }
+    .spec-body{
+        margin-block: 2.5rem;
+        overflow-y: auto;
+    }
+    .spec-body table{
+        border-collapse: collapse;
+    }
+    .spec-body td{
+        padding-block: 10px;
+        line-height: 150%;
+        border-bottom: 1px solid var(--lines-color);
+    }
+    .spec-body tr:last-child td{
+        border-bottom: none;
+    }
+    .spec-body td:first-child{
+        width: 35vw;
+        color: var(--link-hover-color);
+    }
+    .spec-footer{
+        /* height: 3.5rem; */
+    }
+    .spec-footer .order-button{
+        width: 100%;
     }
 
     #quotes-screen{
