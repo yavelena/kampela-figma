@@ -187,7 +187,38 @@ section, .section{
     text-decoration: none;
 }
 
-
+.pop-up{
+    /* display: none; */
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    /* padding: 2rem; */
+    overflow: auto;
+    background-color: var(--backgrnd-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+}
+.pop-up:target{
+    visibility: visible;
+    opacity: 1;
+}
+.pop-up_switcher{
+    display: none;
+}
+.pop-up-close-btn{
+    position: absolute;
+    left: -1.25rem;
+    top: 3.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    background: var(--backgrnd-color) url('../img/menu-close.svg') center no-repeat;
+    cursor: pointer;
+    transition: opacity .3s;
+}
 
 
 /***********************************************/
@@ -532,6 +563,8 @@ section, .section{
     top: 134px;
 }
 #price-container{
+    /* position: relative; */
+    overflow-x: visible;
     margin-top: 4rem;
     gap: 1vw;
 }
@@ -545,7 +578,8 @@ section, .section{
 .available {
     position: absolute;
     top: 1.7vw;
-    right: 1.7VW;
+    /* right: 1.7VW; */
+    right: 2rem;
     width: 7.1vw;
     padding: 54px 0;
     text-align: center;
@@ -569,6 +603,67 @@ section, .section{
 }
 .price-order .order-button {
     margin-top: 25px;
+    width: 100%;
+}
+
+#price-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    z-index: 50;
+    display: none;
+}
+.specifications{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3.5rem;
+    display: flex;
+    border-left: 1px solid var(--lines-hover-color);
+    overflow: visible;
+}
+.specifications h3{
+    font-size: 3rem;
+}
+.spec-header{
+    padding-top: 5rem;
+    background-position: top 22% right -4.5rem;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#devkit-price .spec-header{
+    background-image: url("../img/prices/kampela-devkit.png");
+}
+#kampela-price .spec-header{
+    background-image: url("../img/prices/kampela.png");
+}
+#kampela-x2-price .spec-header{
+    background-image: url("../img/prices/kampelax2.png");
+}
+.spec-body{
+    margin-block: 2.5rem;
+    overflow-y: auto;
+}
+.spec-body table{
+    border-collapse: collapse;
+}
+.spec-body td{
+    padding-block: 10px;
+    line-height: 150%;
+    border-bottom: 1px solid var(--lines-color);
+}
+.spec-body tr:last-child td{
+    border-bottom: none;
+}
+.spec-body td:first-child{
+    width: 35%;
+    color: var(--link-hover-color);
+}
+.spec-footer{
+    /* height: 3.5rem; */
+}
+.spec-footer .order-button{
     width: 100%;
 }
 
@@ -765,27 +860,26 @@ footer .link-menu{grid-area: link-menu;}
     .text-large{font-size: 1rem; line-height: 120%;}
 
     .pop-up{
-        /* display: none; */
         position: fixed;
-        z-index: 100;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        overflow: auto;
-        background-color: var(--backgrnd-color);
-        opacity: 0;
-        visibility: hidden;
-        transition: all .3s ease-in-out;
+        /* overflow: auto; */
+        /* background-color: var(--backgrnd-color); */
+        /* opacity: 0; */
+        /* visibility: hidden; */
+        /* transition: all .3s ease-in-out; */
     }
-    .pop-up:target{
+    /* .pop-up:target{
         visibility: visible;
         opacity: 1;
-    }
-    .pop-up_switcher{
+    } */
+    /* .pop-up_switcher{
         display: none;
-    }
+    } */
     .pop-up-close-btn{
+        position: inherit;
         height: 2.5rem;
         width: 2.5rem;
         border: 1px solid white;
@@ -961,6 +1055,8 @@ footer .link-menu{grid-area: link-menu;}
     }
     .feature-block{
         width: 100%;
+        min-width: auto;
+        min-height: auto;
         padding: 16px;  
     }
     .feature-block h4{
@@ -1068,17 +1164,21 @@ footer .link-menu{grid-area: link-menu;}
         font-size: 12vw;
     }
     .specifications{
+        /* position: relative; */
         padding: 1rem;
-        display: flex;
+        border: none;
+        /* display: flex; */
     }
     .spec-header{
         display: flex;
+        padding: 0;
         justify-content: space-between;
         height: 2.5rem;
+        background: none;
     }
     .spec-body{
-        margin-block: 2.5rem;
-        overflow-y: auto;
+        /* margin-block: 2.5rem; */
+        /* overflow-y: auto; */
     }
     .spec-body table{
         border-collapse: collapse;
@@ -1147,7 +1247,8 @@ footer .link-menu{grid-area: link-menu;}
 
 } 
 
-.scrollable-full-screen, .scrollable-mobile{
+.scrollable, .scrollable-full-screen, .scrollable-mobile{
+    position: sticky;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -1155,9 +1256,7 @@ footer .link-menu{grid-area: link-menu;}
     /* overflow-x: hidden; */
     gap: 1.25rem;
 
-
-
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 }

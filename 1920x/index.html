@@ -20,29 +20,29 @@
 
     <!-- TOP MENU MOBILE VERSION-->
     <input class="mobile" type="checkbox" id="top-menu-switcher" />
-      <div class="fixed-menu mobile">
-        <img src="img/logo.svg" alt="logo" class="logo">
-        <label class="hamb" for="top-menu-switcher">
-          <div class="top-menu-ctrl"></div>
-        </label>
-      </div>
+    <div class="fixed-menu mobile">
+      <img src="img/logo.svg" alt="logo" class="logo">
+      <label class="hamb" for="top-menu-switcher">
+        <div class="top-menu-ctrl"></div>
+      </label>
+    </div>
 
-      <nav class="top-menu-overlay mobile">
-        <div>
-          <button class="order-button white"><a href="#">Order the devkit</a></button>
-          <menu class="main-menu hmenu">
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Delivery</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact</a></li>
-          </menu>
-        </div>
-        <menu class="link-menu hmenu">
-          <li><a href="#" class="underline">Twitter</a></li>
-          <li><a href="#" class="underline">Matrix</a></li>
-          <li><a href="#" class="underline">Github</a></li>
+    <nav class="top-menu-overlay mobile">
+      <div>
+        <button class="order-button white"><a href="#">Order the devkit</a></button>
+        <menu class="main-menu hmenu">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Delivery</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact</a></li>
         </menu>
-      </nav> 
+      </div>
+      <menu class="link-menu hmenu">
+        <li><a href="#" class="underline">Twitter</a></li>
+        <li><a href="#" class="underline">Matrix</a></li>
+        <li><a href="#" class="underline">Github</a></li>
+      </menu>
+    </nav>
 
     <!-- FIRST KAMPELA SCREEN -->
     <div class="first-screen">
@@ -84,7 +84,7 @@
       </section>
 
 
-      
+
       <!-- FIRST SCREEN CONTENT-->
       <div class="headline">
         <div class="description">Cold-Pressed<br>Signing <img src="img/lines-icon.png"></div>
@@ -152,7 +152,7 @@
     <!-- FEATURES SCREEN -->
     <div id="features-screen">
       <h2>Every device design<br>requires compromises.<br>Ours include:</h2>
-      <div id="features-container" class="scrollable-full-screen">
+      <div id="features-container" class="scrollable for-full-screen">
         <div class="feature-block border-container flex-col">
           <div class="feature-text">
             <h4>Cryptographic Strongbox</h4>
@@ -190,7 +190,7 @@
     <!-- CHECK-FEATURES SCREEN -->
     <div id='check-screen'>
       <img src="img/check-screen-kampela.png" alt="kampela">
-      <div class="check-blocks scrollable-mobile">
+      <div class="check-blocks scrollable for-mobile">
         <div id="check-block-1" class="check-block">Very good waterproofness -<br />no joints to fail</div>
         <div id="check-block-2" class="check-block">Inherently produces e-waste at end of product life</div>
         <div id="check-block-3" class="check-block">Never out of battery</div>
@@ -233,20 +233,25 @@
         <a href="#" class="text-medium underline">from €10</a>
       </div>
 
-      <div id="price-container" class="scrollable-full-screen">
+      <div id="price-container" class="scrollable for-full-screen">
+        <a href="#devkit-price">
+          <div id="price-overlay"></div>
+        </a>
         <div id="devkit-price" class="product border-container flex-col">
           <div class="available">available<br />now</div>
           <div class="title">
             <h4>Kampela Devkit</h4>
-            <a href="#devkit-spec" class="text-small underline">Specifications</a>
+            <a href="#devkit-spec" class="text-small underline show-spec">Specifications</a>
           </div>
           <div id="devkit-spec" class="specifications pop-up flex-col">
             <div class="spec-header">
               <div>
                 <span class="text-small">Technical Specifications</span>
                 <h3>Kampela Devkit</h3>
-              </div>  
-              <a href="#devkit-price"><div class="pop-up-close-btn"></div></a>
+              </div>
+              <a href="#devkit-price">
+                <div class="pop-up-close-btn"></div>
+              </a>
             </div>
             <div class="spec-body">
               <table>
@@ -297,15 +302,17 @@
         <div id="kampela-price" class="product border-container flex-col">
           <div class="title">
             <h4>Kampela</h4>
-            <a href="#kampela-spec" class="text-small underline">Specifications</a>
+            <a href="#kampela-spec" class="text-small underline show-spec">Specifications</a>
           </div>
           <div id="kampela-spec" class="specifications pop-up flex-col">
             <div class="spec-header">
               <div>
                 <span class="text-small">Technical Specifications</span>
                 <h3>Kampela</h3>
-              </div>  
-              <a href="#kampela-price"><div class="pop-up-close-btn"></div></a>
+              </div>
+              <a href="#kampela-price">
+                <div class="pop-up-close-btn"></div>
+              </a>
             </div>
             <div class="spec-body">
               <table>
@@ -356,15 +363,17 @@
         <div id="kampela-x2-price" class="product border-container flex-col">
           <div class="title">
             <h4>Kampela x 2</h4>
-            <a href="#kampela-x2-spec" class="text-small underline">Specifications</a>
+            <a href="#kampela-x2-spec" class="text-small underline show-spec">Specifications</a>
           </div>
           <div id="kampela-x2-spec" class="specifications pop-up flex-col">
             <div class="spec-header">
               <div>
                 <span class="text-small">Technical Specifications</span>
                 <h3>Kampela x 2</h3>
-              </div>  
-              <a href="#kampela-x2-price"><div class="pop-up-close-btn"></div></a>
+              </div>
+              <a href="#kampela-x2-price">
+                <div class="pop-up-close-btn"></div>
+              </a>
             </div>
             <div class="spec-body">
               <table>
