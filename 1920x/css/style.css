@@ -578,7 +578,6 @@ section, .section{
 .available {
     position: absolute;
     top: 1.7vw;
-    /* right: 1.7VW; */
     right: 2rem;
     width: 7.1vw;
     padding: 54px 0;
@@ -614,6 +613,7 @@ section, .section{
     z-index: 50;
     display: none;
 }
+
 .specifications{
     position: absolute;
     top: 0;
@@ -719,7 +719,7 @@ section, .section{
     gap: 20px;
 }
 .press-block{
-    width:30vw;
+    min-width: 35vw;
     min-height: 403px;
 }
 .press-item-date{
@@ -847,7 +847,6 @@ footer .link-menu{grid-area: link-menu;}
     .container{
         max-width: 1024px;
         --padding-block: 2rem;
-        /* background-color: #010f26; */
     }
     section, .section{
         padding: 1rem 2rem;     /* 16px  32px */
@@ -865,19 +864,7 @@ footer .link-menu{grid-area: link-menu;}
         left: 0;
         width: 100vw;
         height: 100vh;
-        /* overflow: auto; */
-        /* background-color: var(--backgrnd-color); */
-        /* opacity: 0; */
-        /* visibility: hidden; */
-        /* transition: all .3s ease-in-out; */
     }
-    /* .pop-up:target{
-        visibility: visible;
-        opacity: 1;
-    } */
-    /* .pop-up_switcher{
-        display: none;
-    } */
     .pop-up-close-btn{
         position: inherit;
         height: 2.5rem;
@@ -922,8 +909,8 @@ footer .link-menu{grid-area: link-menu;}
         height: 9vw;
         width: 9vw;
         /* border: none; */
-        background: url('../img/menu.png') center no-repeat;
-        /* background-size: 9vw; */
+        background: url('../img/menu.svg') center no-repeat;
+        background-size: 100%;
         cursor: pointer;
     }
     .top-menu-overlay{
@@ -1178,7 +1165,7 @@ footer .link-menu{grid-area: link-menu;}
     }
     .spec-body{
         /* margin-block: 2.5rem; */
-        /* overflow-y: auto; */
+        overflow-y: auto;
     }
     .spec-body table{
         border-collapse: collapse;
@@ -1247,13 +1234,11 @@ footer .link-menu{grid-area: link-menu;}
 
 } 
 
-.scrollable, .scrollable-full-screen, .scrollable-mobile{
-    position: sticky;
+.scrollable{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 0;
-    /* overflow-x: hidden; */
     gap: 1.25rem;
 
     overflow-x: scroll;
