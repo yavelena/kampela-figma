@@ -8,6 +8,7 @@ html{
 *, *::before, *::after{
     box-sizing: inherit;
 }
+img{max-width: 100%;}
 :root{
     --backgrnd-color: #000;
     --white-color: #fff;
@@ -51,8 +52,11 @@ h2, .text-h2{font-size: 5.375rem;}  /* 86px */
 h3 {font-size: 4rem;}   /* 64px */
 h4, .text-h4{font-size: 2.25rem;}   /* 36px */
 
-.text-h1{font-size: 5vw;}
-.text-h3{font-size: 3.3vw; line-height: 100%;}
+.text-h1{font-size: clamp(4rem, 5vw, 5rem);}
+.text-h3{
+    font-size: clamp(2rem, 3.3vw, 4rem); 
+    line-height: 100%;
+}
 
 .text-large{
     font-size: 1.25rem; /* 20px */
@@ -66,7 +70,7 @@ h4, .text-h4{font-size: 2.25rem;}   /* 36px */
     font-size: 0.875rem; /* 14px */
     line-height: 123%;
 }
-.kampela-logo{
+.huge-title{
     font-family: 'Space Mono', monospace; 
     font-weight: 700;
     text-transform: uppercase;
@@ -78,6 +82,7 @@ a.underline{
     position: relative;
     text-decoration: none;
     overflow: hidden;
+    z-index: 100;
 }
 a.underline::before{
     content: '';
@@ -122,9 +127,6 @@ a.underline:hover::before{
 
 /* ELEMENTS */
 
-section, .section{
-    padding-inline: 3.5rem;     /* 56px */
-}
 .order-button {
     padding: 21px 20px;
     color: var(--white-color);
@@ -134,6 +136,7 @@ section, .section{
     border: none;
     border-radius: 37px;
     cursor: pointer;
+    z-index: 1000;
 }
 .order-button:hover{
     background-color: var(--dark-green-color);
@@ -178,26 +181,21 @@ section, .section{
     display: flex;
     align-items: center;
     list-style-type: none;
-}
-.hmenu li:last-child{
-    margin: 0;
-    padding: 0;
+    z-index: 1000;
 }
 .hmenu li a{
     text-decoration: none;
 }
 
 .pop-up{
-    /* display: none; */
+    visibility: hidden;
     position: absolute;
     z-index: 100;
     width: 100%;
     height: 100%;
-    /* padding: 2rem; */
     overflow: auto;
     background-color: var(--backgrnd-color);
     opacity: 0;
-    visibility: hidden;
     transition: all .3s ease-in-out;
 }
 .pop-up:target{
@@ -224,7 +222,7 @@ section, .section{
 /***********************************************/
 /***********************************************/
 /***********************************************/
-/*************    FULL-SCREEN    ***************/
+/***************  COMMON STYLES  ***************/
 /***********************************************/
 /***********************************************/
 /***********************************************/
@@ -232,7 +230,7 @@ section, .section{
 /* FIXED TOP MENU */
 
 .fixed-menu {
-    padding-block: 1.375rem; /* 22px */
+    padding: 1.375rem 3.5rem; /* 22px 56px */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -280,20 +278,16 @@ section, .section{
 
 
 /* FIRST SCREEN */
-.first-screen {
-    background: url('../img/star-icon-18.png') left 30vw top 10vw no-repeat,
-                url('../img/star-icon-19.png') right 30vw bottom 5vw no-repeat;
-}
+
 .headline{
-    width: 78vw;
-    margin: 14.5vh auto;
-    /* position: relative; */
+    /* width: 78vw; */
+    margin: 14.5vh 3%;
 }
 .headline .description{
     position: relative;
     top: 2vw;
     margin-left: auto;
-    max-width: 21vw;
+    width: 20vw;
     font-size: 3vw;
     line-height: 2.6vw;
 }
@@ -302,7 +296,8 @@ section, .section{
     width: 6.5vw;
 }
 .first-screen h1{
-    font-size: 18vw;
+    display: inline-block;
+    font-size: clamp(12.5rem, 22vw, 27rem);
     line-height: 1;
 }
  
@@ -355,43 +350,7 @@ section, .section{
 
 /* ABOUT SCREEN */
 
-#about-screen{
-    position: relative;
-    height: 1300px;
-    background: url('../img/planet.png') right 334px top 165px no-repeat,
-                url('../img/line.png') right center no-repeat, 
-                url('../img/star-icon-1.png') right 293px top 433px no-repeat,
-                url('../img/star-icon-2.png') right 514px bottom 473px no-repeat,
-                url('../img/star-icon-3.png') left 320px bottom 278px no-repeat;
-    background-size:  13.5vw, 50vw, 1.8vw, 1.8vw, 4vw;
-}
-#about-screen .kampela-img{
-    background: url('../img/kampela-img.png') center no-repeat;
-    background-size: 30.2vw;
-    width: 711px;
-    height: 970px;
-    position: absolute;
-    top: 93px;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
 
-#about-text-block-1{
-    width: 30.5vw;
-    position: relative;
-    top: calc(100px + 4.5vw);
-    left: 10vw;
-}
-#about-text-block-2{
-    width: 22vw;
-    position: relative;
-    top: calc(400px + 6.8vw);
-    left: 66.5vw;
-}
-#prop-list-container{
-    margin-top: 3.5rem;
-}
 .prop-list{
     padding: 0;
     display: grid;
@@ -410,22 +369,17 @@ section, .section{
 /* KAMBALA SCREEN */
 
 #kambala-screen{
-    height: 62.5vw;
-    background: url('../img/binline.png') left top no-repeat,
-                url('../img/lake-bottom.png') center bottom no-repeat;
-    background-size: 100vw;
+    position: relative;
+    bottom: 0;
+    max-height: 72rem;
+    height: 62vw;
+    background: url('../img/lake-bottom.png') center bottom no-repeat;
+    background-size: 100%;
 }
+
 
 
 /* VIDEO SCREEN */
-#video-screen{
-    width: 100%;
-    height: 54vw;
-    overflow: hidden;
-}
-#video-screen img{
-    width: 100%;
-}
 
 
 /* FEATURES SCREEN */
@@ -459,13 +413,15 @@ section, .section{
     background-size: 100vw;
 }
 #check-screen img{
-    width: 24.4vw;
+    width: 25%;
     position: absolute;
     top: 6.4vw;
-    left: 37.8vw;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 #check-screen .check-block{
-    width: 12.5vw;
+    width: 15%;
     background: url("../img/check-icon.png") top left no-repeat;
     padding: 0;
     padding-top: 48px;
@@ -475,24 +431,24 @@ section, .section{
     line-height: 120%;
 }
 #check-block-1{
-    top: 7.6vw;
-    left: 28vw;
+    top: 10%;
+    left: 30%;
 }
 #check-block-2{
-    top: 21.1vw;
-    left: 20.26vw;
+    top: 35%;
+    left: 20%;
 }
 #check-block-3{
-    top: 37vw;
-    left: 23.2vw;
+    top: 60%;
+    left: 23%;
 }
 #check-block-4{
-    top: 14.7vw;
-    right: 19.1vw;
+    top: 20%;
+    left: 67%;
 }
 #check-block-5{
-    top: 30vw;
-    right: 24.37vw;
+    top: 55%;
+    left: 63%;
 }
 
 
@@ -563,7 +519,7 @@ section, .section{
     top: 134px;
 }
 #price-container{
-    /* position: relative; */
+    position: relative;
     overflow-x: visible;
     margin-top: 4rem;
     gap: 1vw;
@@ -577,9 +533,9 @@ section, .section{
 }
 .available {
     position: absolute;
-    top: 1.7vw;
+    top: 2%;
     right: 2rem;
-    width: 7.1vw;
+    width: 18%;
     padding: 54px 0;
     text-align: center;
     font-size: 14px;
@@ -587,7 +543,7 @@ section, .section{
     text-transform: uppercase;
     color: var(--backgrnd-color);
     background: url('../img/available-icon.png') center no-repeat;
-    background-size: 7.1vw;
+    background-size: 100%;
 }
 .price-order {
     margin-top: 25px;
@@ -610,8 +566,8 @@ section, .section{
     width: 100%;
     height: 100%;
     backdrop-filter: blur(6px);
-    z-index: 50;
-    display: none;
+    z-index: 500;
+    visibility: hidden;
 }
 
 .specifications{
@@ -622,6 +578,7 @@ section, .section{
     display: flex;
     border-left: 1px solid var(--lines-hover-color);
     overflow: visible;
+    z-index: 5000;
 }
 .specifications h3{
     font-size: 3rem;
@@ -710,7 +667,7 @@ section, .section{
 
 #kampela-in-press{
     background: url('../img/press-bg-space.png') top right no-repeat;
-    background-size: 46vw;
+    background-size: 45%;
     padding: calc(100px + 4vw) 56px;
 }
 #press-container{
@@ -779,7 +736,7 @@ footer .link-menu{grid-area: link-menu;}
     }
     .fixed-menu .link-menu{display: none;}
     .headline .description{
-        margin-left: 0;
+        margin-left: 1%;
         margin-right: auto;
     }
 }
@@ -862,20 +819,12 @@ footer .link-menu{grid-area: link-menu;}
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 100vh;
+        /* width: 100vw;
+        height: 100vh; */
     }
     .pop-up-close-btn{
         position: inherit;
-        height: 2.5rem;
-        width: 2.5rem;
-        border: 1px solid white;
-        border-radius: 50%;
-        background: url('../img/menu-close.svg') center no-repeat;
-        cursor: pointer;
-        transition: opacity .3s;
     }
-    
     
     .first-screen{
         min-height: 95vh;
@@ -883,7 +832,7 @@ footer .link-menu{grid-area: link-menu;}
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background-image: none;
+        /* background-image: none; */
         padding-bottom: var(--padding-block);
     }
     .mobile.fixed-menu{
@@ -914,19 +863,19 @@ footer .link-menu{grid-area: link-menu;}
         cursor: pointer;
     }
     .top-menu-overlay{
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity .3s ease-out;
         position: fixed;
-        z-index: 50;
         top: calc(9vw + 1.5rem);
         left: 0;
         width: 100vw;
+        min-height: calc(100vh - 9vw - 1.5rem);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s ease-out;
+        display: flex;
         overflow-y: auto;
+        z-index: 5000;
         background-color: var(--backgrnd-color);
         padding: 2rem 1rem;
-        min-height: calc(100vh - 9vw - 1.5rem);
-        display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
@@ -955,6 +904,14 @@ footer .link-menu{grid-area: link-menu;}
     }
     .top-menu-overlay .main-menu li{font-size: 1.5rem;}
     
+    #fixed-kampela{
+        position: absolute;
+        width: 60vw;
+        top: 14vh;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
     .headline{
         margin: 0;
         padding: var(--padding-block) 0.75rem;
@@ -965,13 +922,14 @@ footer .link-menu{grid-area: link-menu;}
         margin-top: 12vh;
     }
     .headline .description{
-        font-size: 5.5vw;
-        max-width: 37.3vw;
+        font-size: 5vw;
+        width: 50%;
+        max-width: 50%;
         line-height: 100%;
         
     }
     .headline .description img{
-        width: 13.9vw;
+        width: 12vw;
         margin-left: 0;
     }
     .first-screen .preorder-buttons{
@@ -982,6 +940,8 @@ footer .link-menu{grid-area: link-menu;}
     }
     .first-screen .preorder-buttons .order-button{width: 100%;}
     
+/* RUNNING TEXT LINE */
+
     .running-text-line{
         height: 2rem;
         padding: 6px;
@@ -990,6 +950,8 @@ footer .link-menu{grid-area: link-menu;}
         font-size: .875rem;
         line-height: 123%;
     }
+
+/* ABOUT SCREEN */
 
     #about-screen{
         background-image: none;
@@ -1027,8 +989,9 @@ footer .link-menu{grid-area: link-menu;}
     }
 
     #kambala-screen{
+        height: 50vw;
         background: url('../img/kambala.png') center bottom no-repeat;
-        background-size: 80vw;
+        background-size: 65%;
     }
 
     #features-screen{
@@ -1138,15 +1101,6 @@ footer .link-menu{grid-area: link-menu;}
         font-size: 24px;
         line-height: 110%;
     }
-    #price-container .product .available{
-        width: 77px;
-        height: 80px;
-        font-size: 10px;
-        background-size: 77px;
-        padding-top: 30px;
-        top: 20px;
-        right: 14px;
-    }
     .price-order .price{
         font-size: 12vw;
     }
@@ -1231,8 +1185,115 @@ footer .link-menu{grid-area: link-menu;}
         min-width: 240px;
         min-height: 280px;
     }
-
 } 
+
+/***********************************************/
+/***********************************************/
+/***********************************************/
+/**************    FULL-SCREEN   ***************/
+/***********************************************/
+/***********************************************/
+/***********************************************/
+
+@media (min-width: 1025px){
+    .container{
+        /* background-color: #181818; */
+    }
+
+    .pop-up{
+        position: absolute;
+    }
+
+    /* sweaming kampela->fish  */
+    .sweaming-kampela-container{
+        position: relative;
+    }
+    .sweaming-kampela-mask, .sweaming-fish-mask{
+        position: absolute;
+        inset: 0;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 100vw;
+        mask-repeat: no-repeat;
+        mask-size: 100%;
+    }
+    .sweaming-kampela-mask{
+        -webkit-mask-image: url("../img/mask-top.svg");
+        -webkit-mask-position: bottom;
+        mask-image: url("../img/mask-top.svg");
+        mask-position: bottom;
+    }
+    .sweaming-fish-mask{
+        -webkit-mask-image: url("../img/mask-bottom.svg");
+        -webkit-mask-position: top ;
+        mask-image: url("../img/mask-bottom.svg");
+        mask-position: top ;
+    }
+    .fixed-kampela-fish{
+        position: fixed;
+        width: 42vw;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 200;
+        /* background-color: #5E5E5E; */
+    }
+    #fixed-kampela{
+        top: 12%;
+        width: 36%;
+        max-width: 45rem;
+    }
+    #fixed-fish{
+        top: 12vw;
+    }
+
+    .first-screen {
+        position: relative;
+        background: url('../img/star-icon-18.png') left 30vw top 10vw no-repeat,
+                    url('../img/star-icon-19.png') right 30vw bottom 5vw no-repeat;
+    }
+  
+
+  /* ABOUT SCREEN */
+    #about-screen{
+        position: relative;
+        height: calc(75rem + 5vw);
+        background: url(../img/planet.png) right 15% top 8% no-repeat, 
+                    url(../img/line.png) right center no-repeat, 
+                    url(../img/star-icon-1.png) right 10% top 30% no-repeat, 
+                    url(../img/star-icon-2.png) right 26% top 62% no-repeat, 
+                    url(../img/star-icon-3.png) left 20% bottom 25% no-repeat;
+        background-size:  13%, 50%, 2.5%, 2.5%, 4%;
+    }
+    #about-text-block-1{
+        width: 30%;
+        position: relative;
+        top: calc(100px + 4.5vw);
+        left: 10%;
+    }
+    #prop-list-container{
+        margin-top: 3.5rem;
+    }
+    #about-text-block-2{
+        width: 22%;
+        position: relative;
+        top: calc(400px + 6.8vw);
+        left: 66%;
+    }
+
+    /* KAMBALA SCREEN */
+
+    .binline-wave{
+        position: relative;
+        margin-top: -5%;
+        height: 10%;
+        top: -1.5%;
+        background-image: url('../img/binline.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        /* background-color: blue; */
+    }
+}
 
 .scrollable{
     display: flex;

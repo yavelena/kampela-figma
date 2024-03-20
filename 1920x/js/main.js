@@ -33,18 +33,18 @@ function ShowSpec(){
     if (price_overlay){
         for (let i=0; i<nodeList_showspec.length; i++){
             nodeList_showspec[i].onclick = function() {
-                price_overlay.style.display = "block";
+                price_overlay.style.visibility = "visible";
             }
         }
 
         for (let i=0; i<nodeList_hidespec.length; i++){
             nodeList_hidespec[i].onclick = function() {
-                price_overlay.style.display = "none";
+                price_overlay.style.visibility = "hidden";
             }
         }
 
         price_overlay.onclick = function(){
-            price_overlay.style.display = "none";
+            price_overlay.style.visibility = "hidden";
         }
     }
     
