@@ -386,15 +386,22 @@ a.underline:hover::before{
 
 #features-screen {
     background: url('../img/star-icon-18.png') right 14vw top 154px no-repeat;
-    padding: calc(100px + 4.15vw) 0 42px 56px;
+    padding: calc(100px + 4.15vw) 3.5rem 2.5rem 3.5rem;
 }
 #features-screen h2{
     line-height: 100%;
 }
-#features-container{margin-top: 4rem;}
+#features-container{
+    margin-top: 4rem;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+}
 .feature-block{
-    min-width: 33rem;
-    min-height: 34vw;
+    padding: 0.5rem 1.5rem;
+    background-color: #111111;
+    display: flex;
+    flex-direction: column;
 }
 .feature-block p{
     color: var(--link-hover-color);
@@ -459,23 +466,19 @@ a.underline:hover::before{
     overflow: hidden;
 }
 #work-steps-block{
-    margin-top: 50px;
-    padding: 0;
-    border-top: 1px solid var(--lines-hover-color);
     display: flex;
-    gap: 52px;
-}
-.work-step:last-child{
-    margin-right: 0;
+    margin-top: 3.5rem;
+    padding: 0;
+    gap: 3%;
 }
 .work-step{
-    width: 33.2vw;
-    color: var(--lines-hover-color);
+    width: 100%;
+    align-items: flex-start;
 }
 .step-number{
     display: inline-block;
     font-size: 14px;
-    border: 1px solid var(--lines-hover-color);
+    border: 1px solid var(--white-color);
     border-radius: 27px;
     padding: 8px 16px;
     position: relative;
@@ -484,18 +487,19 @@ a.underline:hover::before{
 }
 .work-step h4{
     font-size: 36px;
-    margin: 0;
-    color: var(--lines-hover-color);
+    margin-bottom: 1rem;
+    /* color: var(--lines-hover-color); */
 }
 .work-step-container{
-    margin-top: 72px;
-    width: 30.7vw;
-    height: 25vw;
-    border: none;
+    display: flex;
+    margin-top: 10%;
+    /* height: 25vw; */
     border-radius: 15px;
-    background-image: linear-gradient(#181818, #050505);
+    /* background-image: linear-gradient(#181818, #050505); */
+    overflow: hidden;
 }
-.work-step.active{
+
+/* .work-step.active{
     color: var(--white-color);
 }
 .work-step.active h4{
@@ -503,7 +507,7 @@ a.underline:hover::before{
 }
 .work-step.active .step-number{
     border-color: var(--white-color);
-}
+} */
 
 
 /* PRICING */
@@ -527,15 +531,16 @@ a.underline:hover::before{
 
 .product {
     position: relative;
-    width: 30vw;
+    /* width: 30vw;
     min-width: 30rem;
-    min-height: 743px;
+    min-height: 743px; */
 }
 .available {
     position: absolute;
-    top: 2%;
-    right: 2rem;
-    width: 18%;
+    top: 6%;
+    right: 2%;
+    width: 30%;
+    max-width: 8rem;
     padding: 54px 0;
     text-align: center;
     font-size: 14px;
@@ -676,7 +681,7 @@ a.underline:hover::before{
     gap: 20px;
 }
 .press-block{
-    min-width: 35vw;
+    min-width: 30%;
     min-height: 403px;
 }
 .press-item-date{
@@ -997,7 +1002,9 @@ footer .link-menu{grid-area: link-menu;}
     #features-screen{
         background-image: none;
         padding: 32px 16px;
+        margin-top: 2rem;
     }
+
     #features-container{
         flex-direction: column;
         gap: 16px;
@@ -1053,28 +1060,33 @@ footer .link-menu{grid-area: link-menu;}
         margin: 12px 16px;
         width: calc(100% - 32px);
     }
-
+    
+    /* HOW IT WORKS */
     #how-it-works{
         padding: 32px 16px;
     }
     #work-steps-block{
-        gap: 20px;
+        flex-direction: column;
+        gap: 4rem;
     }
     #work-steps-block .step-number{
         font-size: 12px;
     }
-    #work-steps-block .work-step{
+    .work-step{
         min-width: 240px;
     }
-    #work-steps-block .work-step h4 {
+    .work-step h4 {
         font-size: 20px;
     }
-    #work-steps-block .work-step-container{
+    .work-step-container{
         margin-top: 20px;
-        width: 100%;
-        min-height: 250px;
+        justify-content: center;
+        align-items: center;
+        /* width: 100%; */
+        /* min-height: 250px; */
     }
 
+    /* PRICES */
     #pricing-screen{
         padding: 32px 16px;
     }
@@ -1100,6 +1112,9 @@ footer .link-menu{grid-area: link-menu;}
     #price-container .product  h4{
         font-size: 24px;
         line-height: 110%;
+    }
+    .available{
+        width: 25%;
     }
     .price-order .price{
         font-size: 12vw;
@@ -1143,6 +1158,7 @@ footer .link-menu{grid-area: link-menu;}
         width: 100%;
     }
 
+    /* QUOTES */
     #quotes-screen{
         padding: 32px 16px;
     }
@@ -1251,8 +1267,7 @@ footer .link-menu{grid-area: link-menu;}
         background: url('../img/star-icon-18.png') left 30vw top 10vw no-repeat,
                     url('../img/star-icon-19.png') right 30vw bottom 5vw no-repeat;
     }
-  
-
+ 
   /* ABOUT SCREEN */
     #about-screen{
         position: relative;
@@ -1281,7 +1296,6 @@ footer .link-menu{grid-area: link-menu;}
     }
 
     /* KAMBALA SCREEN */
-
     .binline-wave{
         position: relative;
         margin-top: -5%;
@@ -1293,7 +1307,22 @@ footer .link-menu{grid-area: link-menu;}
         background-size: 100%;
         /* background-color: blue; */
     }
+    /* FEATURES */
+    #features-screen h2{
+        width: 55%;
+    }
+    /* HOW IT WORKS */
+    #work-steps-block{
+        border-top: 1px solid var(--lines-hover-color);
+    }
+
+    /* PRICES */
+    .product{
+
+    }
 }
+
+
 
 .scrollable{
     display: flex;
