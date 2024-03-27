@@ -402,16 +402,8 @@ a.underline:hover::before{
     background-color: #111111;
     display: flex;
     flex-direction: column;
-    
-    &:hover{
-        border-color: var(--link-hover-color);
-        p{
-            visibility: visible;
-        }
-    }
 }
 .feature-block p{
-    visibility: hidden;
     color: var(--link-hover-color);
 }
 .feature-block img{
@@ -1324,6 +1316,18 @@ footer .link-menu{grid-area: link-menu;}
     #features-screen h2{
         width: 55%;
     }
+    .feature-block{
+        &:hover{
+            border-color: var(--link-hover-color);
+            p{
+                visibility: visible;
+            }
+        }
+    }
+    .feature-block p{
+        visibility: hidden;
+    }
+    
     /* HOW IT WORKS */
     #work-steps-block{
         border-top: 1px solid var(--lines-hover-color);
