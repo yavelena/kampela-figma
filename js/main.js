@@ -47,13 +47,72 @@ function ShowSpec(){
             price_overlay.style.visibility = "hidden";
         }
     }
-    
 }
 
+
+
+
+function PageNav(){
+    
+    var pages = document.querySelectorAll(".pages-nav menu li");
+    var page_bodies = document.getElementsByClassName("page-content");
+    var max_page = pages.length;
+    
+
+    function PageActivate(page_number){
+        for (j = 0; j < pages.length; j++) {
+            pages[j].classList.remove("active-page");
+        }
+        for (i = 0; i < page_bodies.length; i++) {
+            page_bodies[i].classList.remove("active");
+        }
+        page_bodies[page_number-1].classList.add("active");
+        pages[page_number-1].classList.add("active-page");
+    }
+    
+    function TxtToPageNum(txt){
+        return Number(txt.replace(/\D/g,''));
+    }
+
+    function GetActivePageNumber(){
+        var active_page = document.querySelectorAll('.pages-nav .active-page')[0];
+        if (active_page){
+            return TxtToPageNum(active_page.innerText);
+        } else return 0;
+    }
+
+    function PageClick(e){
+        var page_num = TxtToPageNum(e.target.innerText);
+        if (!page_num) page_num = 1;
+        PageActivate(page_num);
+    }
+
+    
+
+    function PreviousPage(){
+        var curr_page = GetActivePageNumber();
+        next_page = (curr_page > 1) ? curr_page - 1 : max_page;
+        PageActivate(next_page);
+    }
+
+    function NextPage(){
+        var curr_page = GetActivePageNumber();
+        next_page = (curr_page < max_page) ? curr_page + 1 : 1;
+        PageActivate(next_page);
+    }
+
+    function addPageClickHandler(item){
+        item.addEventListener("click", PageClick, false);
+    }
+    document.querySelectorAll(".pages-nav menu li").forEach(addPageClickHandler);
+    document.getElementById("previous-page").addEventListener("click", PreviousPage);
+    document.getElementById("next-page").addEventListener("click", NextPage);
+}
 
 document.addEventListener("DOMContentLoaded", function() {
     CustomScroll();
     ShowSpec();
+    PageNav();
 }); 
 
 

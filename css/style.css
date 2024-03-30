@@ -76,7 +76,10 @@ h4, .text-h4{font-size: 2.25rem;}   /* 36px */
     text-transform: uppercase;
 }
 
-a{color: var(--white-color);}
+a{
+    color: var(--white-color);
+    cursor: pointer;
+}
 
 a.underline{
     position: relative;
@@ -499,16 +502,6 @@ a.underline:hover::before{
     overflow: hidden;
 }
 
-/* .work-step.active{
-    color: var(--white-color);
-}
-.work-step.active h4{
-    color: var(--white-color);
-}
-.work-step.active .step-number{
-    border-color: var(--white-color);
-} */
-
 
 /* PRICING */
 
@@ -535,9 +528,6 @@ a.underline:hover::before{
 .product {
     position: relative;
     width: 100%;
-    /* width: 30vw;
-    min-width: 30rem;
-    min-height: 743px; */
 }
 .available {
     position: absolute;
@@ -646,22 +636,48 @@ a.underline:hover::before{
 #quotes-title{margin-right: 93px;}
 .pages-nav{
     display: flex;
+    gap: 1.25rem;
 }
 .pages-nav menu{
     padding: 0;
-    margin: 0 20px;
+    margin: 0;
     list-style-type: none;
 }
 .pages-nav menu li{
     display: inline-block;
-    padding-right: 16px;
+    padding-right: 1rem;
+}
+.pages-nav menu li{
+    color: var(--lines-hover-color);
+    cursor: pointer;
+}
+.pages-nav menu li:hover{
+    color: var(--link-hover-color);
+}
+.pages-nav menu .active-page, .pages-nav menu .active-page:hover {
+    color: var(--white-color);
+    cursor: auto;
 }
 .pages-nav menu li:last-child{padding-right: 0;}
-.pages-nav menu li a{
-    color: var(--lines-hover-color);
-    text-decoration: none;
+
+
+.quote{
+    display: none;
 }
-.quote{margin: 52px 0;}
+.quote.active{
+    display: block;
+}
+.quote {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+.quote-text{margin: 52px 0;}
 .author{
     height: 56px;
     display: flex;
@@ -1180,7 +1196,7 @@ footer .link-menu{grid-area: link-menu;}
         padding-bottom: 100px;
         background-image: none;
     }
-    .quote{
+    .quote-text{
         padding-left: 52px;
         margin-block: 1.5rem;
         background: url('../img/quote-icon.png') top left no-repeat;
@@ -1327,7 +1343,7 @@ footer .link-menu{grid-area: link-menu;}
     .feature-block p{
         visibility: hidden;
     }
-    
+
     /* HOW IT WORKS */
     #work-steps-block{
         border-top: 1px solid var(--lines-hover-color);
