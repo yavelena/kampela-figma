@@ -629,7 +629,7 @@ a.underline:hover::before{
     padding: 90px 11vw 0px;
 }
 #quotes-body{
-    background: url('../img/quote-icon.png') top 96px left 4px no-repeat;
+    background: url('../img/quote-icon.png') top left no-repeat;
     padding-left: 8vw;
 }
 #quotes-header{display: flex;}
@@ -677,7 +677,15 @@ a.underline:hover::before{
     to {opacity: 1;}
   }
 
-.quote-text{margin: 52px 0;}
+.quote-text{
+    font-size: 2.25rem;
+    color: var(--link-hover-color);
+    margin: 52px 0;
+}
+.quote-text b{
+    font-weight: inherit;
+    color: #fff;
+}
 .author{
     height: 56px;
     display: flex;
