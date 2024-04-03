@@ -1,3 +1,13 @@
+function FishScroll(){
+    var kambala_bottom = document.getElementById('kambala-screen');
+    var kambala = document.getElementById('fixed-fish');
+    document.addEventListener("scroll", function(){
+        kambala.style.position = (kambala_bottom.getBoundingClientRect().top <= 0)? 'absolute' : 'fixed';
+        // console.log(kambala_bottom.getBoundingClientRect().top + ' ' + kambala.getBoundingClientRect().top);
+      });
+}
+
+
 function CustomScroll(){
 
     function ScrollH(e){
@@ -110,6 +120,7 @@ function PageNav(){
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+    FishScroll();
     CustomScroll();
     ShowSpec();
     PageNav();
