@@ -1284,7 +1284,7 @@ footer .link-menu{grid-area: link-menu;}
     }
 
     #fixed-kampela, #fixed-fish{
-        animation-duration: 2s;
+        animation-duration: 3s;
         animation-direction: alternate;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
@@ -1298,12 +1298,12 @@ footer .link-menu{grid-area: link-menu;}
     }
     @keyframes fixed-kampela-animation {
         from {
-          top: 12%;
+          /* top: 12%; */
           transform: rotate(0deg);
         }
         to {
-          top: 13%;
-          transform: rotate(5deg);
+          /* top: 12.5%; */
+          transform: rotate(3deg);
         }
     }
 
@@ -1313,12 +1313,12 @@ footer .link-menu{grid-area: link-menu;}
     }
     @keyframes fixed-fish-animation {
         from {
-          top: 12vw;
+          /* top: 12vw; */
           transform: rotate(0deg);
         }
         to {
-          top: 13vw;
-          transform: rotate(5deg);
+          /* top: 13vw; */
+          transform: rotate(2.5deg);
         }
     }
 
