@@ -1282,13 +1282,44 @@ footer .link-menu{grid-area: link-menu;}
         z-index: 200;
         /* background-color: #5E5E5E; */
     }
+
+    #fixed-kampela, #fixed-fish{
+        animation-duration: 2s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
     #fixed-kampela{
         top: 12%;
         width: 36%;
         max-width: 38rem;
+        animation-name: fixed-kampela-animation;
     }
+    @keyframes fixed-kampela-animation {
+        from {
+          top: 12%;
+          transform: rotate(0deg);
+        }
+        to {
+          top: 13%;
+          transform: rotate(5deg);
+        }
+    }
+
     #fixed-fish{
         top: 12vw;
+        animation-name: fixed-fish-animation;
+    }
+    @keyframes fixed-fish-animation {
+        from {
+          top: 12vw;
+          transform: rotate(0deg);
+        }
+        to {
+          top: 13vw;
+          transform: rotate(5deg);
+        }
     }
 
     .first-screen {
