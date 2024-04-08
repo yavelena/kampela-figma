@@ -398,7 +398,7 @@ a.underline:hover::before{
     margin-top: 4rem;
     display: grid;
     grid-gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
 }
 .feature-block{
     padding: 0.5rem 1.5rem;
