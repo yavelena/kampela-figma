@@ -165,6 +165,13 @@ a.underline:hover::before{
     color: var(--black-color);
     background: url('../img/arrow-right-black.png') no-repeat 100% center;
 }
+.order-button.no-active{
+    background-color: #9d9d9d;
+    cursor: default;
+}
+.order-button.no-active a{
+    cursor: default;
+}
 
 .border-container{
     padding: 2rem;
@@ -1387,6 +1394,9 @@ footer .link-menu{grid-area: link-menu;}
     #work-steps-block{
         border-top: 1px solid var(--lines-hover-color);
     }
+    .step-description{
+        width: 70%;
+    }
 
     /* PRICES */
     .product{
@@ -1410,3 +1420,5 @@ footer .link-menu{grid-area: link-menu;}
 ::-webkit-scrollbar{
     display: none;
 }
+
+
