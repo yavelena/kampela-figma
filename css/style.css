@@ -119,7 +119,7 @@ a.underline:hover::before{
 .arrow{
     width: 60px;
     height: 22px;
-    background: url('../img/arrow-right-up.png') no-repeat top right;
+    background: url('../img/arrow-right-up.webp') no-repeat top right;
 }
 .arrow.bottom{
     position: relative;
@@ -149,7 +149,7 @@ a.underline:hover::before{
     font-size: 0.875rem; /* 14px */
     font-weight: 500;
     color: var(--white-color);
-    background: url('../img/arrow-right.png') no-repeat 100% 0;
+    background: url('../img/arrow-right.webp') no-repeat 100% 0;
     background-size: 20px;
     padding-right: 24px;
     text-decoration: none;
@@ -163,7 +163,7 @@ a.underline:hover::before{
 }
 .order-button.white a{
     color: var(--black-color);
-    background: url('../img/arrow-right-black.png') no-repeat 100% center;
+    background: url('../img/arrow-right-black.webp') no-repeat 100% center;
 }
 .order-button.no-active{
     background-color: #9d9d9d;
@@ -370,7 +370,7 @@ a.underline:hover::before{
 }
 .prop-list li{
     display: inline-block;
-    background: url('../img/arrow-right.png') top left no-repeat;
+    background: url('../img/arrow-right.webp') top left no-repeat;
     background-size: 1.2em;
     padding-left: 1.6em;
 }
@@ -383,7 +383,7 @@ a.underline:hover::before{
     bottom: 0;
     max-height: 72rem;
     height: 62vw;
-    background: url('../img/lake-bottom.png') center bottom no-repeat;
+    background: url('../img/lake-bottom.webp') center bottom no-repeat;
     background-size: 100%;
 }
 
@@ -395,7 +395,7 @@ a.underline:hover::before{
 /* FEATURES SCREEN */
 
 #features-screen {
-    background: url('../img/star-icon-18.png') right 14vw top 154px no-repeat;
+    background: url('../img/star-icon-18.webp') right 14vw top 154px no-repeat;
     padding: calc(100px + 4.15vw) 3.5rem 2.5rem 3.5rem;
 }
 #features-screen h2{
@@ -426,7 +426,7 @@ a.underline:hover::before{
 #check-screen{
     position: relative;
     height: 52vw;
-    background: url('../img/check-screen-bg.png') center top -9px no-repeat;
+    background: url('../img/check-screen-bg.webp') center top -9px no-repeat;
     background-size: 100vw;
 }
 #check-screen img{
@@ -439,7 +439,7 @@ a.underline:hover::before{
 }
 #check-screen .check-block{
     width: 15%;
-    background: url("../img/check-icon.png") top left no-repeat;
+    background: url("../img/check-icon.webp") top left no-repeat;
     padding: 0;
     padding-top: 48px;
     position: absolute;
@@ -548,7 +548,7 @@ a.underline:hover::before{
     font-weight: 500;
     text-transform: uppercase;
     color: var(--backgrnd-color);
-    background: url('../img/available-icon.png') center no-repeat;
+    background: url('../img/available-icon.webp') center no-repeat;
     background-size: 100%;
 }
 .price-order {
@@ -596,13 +596,13 @@ a.underline:hover::before{
     background-size: 100%;
 }
 #devkit-price .spec-header{
-    background-image: url("../img/prices/kampela-devkit.png");
+    background-image: url("../img/prices/kampela-devkit.webp");
 }
 #kampela-price .spec-header{
-    background-image: url("../img/prices/kampela.png");
+    background-image: url("../img/prices/kampela.webp");
 }
 #kampela-x2-price .spec-header{
-    background-image: url("../img/prices/kampelax2.png");
+    background-image: url("../img/prices/kampelax2.webp");
 }
 .spec-body{
     margin-block: 2.5rem;
@@ -636,7 +636,7 @@ a.underline:hover::before{
     padding: 90px 11vw 0px;
 }
 #quotes-body{
-    background: url('../img/quote-icon.png') top left no-repeat;
+    background: url('../img/quote-icon.webp') top left no-repeat;
     padding-left: 8vw;
 }
 #quotes-header{display: flex;}
@@ -706,7 +706,7 @@ a.underline:hover::before{
 /* KAMPELA IN PRESS */
 
 #kampela-in-press{
-    background: url('../img/press-bg-space.png') top right no-repeat;
+    background: url('../img/press-bg-space.webp') top right no-repeat;
     background-size: 45%;
     padding: calc(100px + 4vw) 56px;
 }
@@ -835,7 +835,7 @@ footer .link-menu{grid-area: link-menu;}
 }
 .mobile .link-menu li a{
     padding-right: 22px;
-    background: url('../img/arrow-right-up.png') right top no-repeat;
+    background: url('../img/arrow-right-up.webp') right top no-repeat;
 }
 
 @media (max-width: 1024px){
@@ -1012,8 +1012,8 @@ footer .link-menu{grid-area: link-menu;}
     }
     #about-screen .kampela-img{
         /* height: 74vw; */
-        background: url('../img/line.png') right  center no-repeat,
-                    url('../img/planet.png') right 15vw top 13px no-repeat;
+        background: url('../img/line.webp') right  center no-repeat,
+                    url('../img/planet.webp') right 15vw top 13px no-repeat;
         background-size: 87vw, 77px;
         width: 100%;
         height: 266px;
@@ -1030,7 +1030,7 @@ footer .link-menu{grid-area: link-menu;}
 
     #kambala-screen{
         height: 50vw;
-        background: url('../img/kambala.png') center bottom no-repeat;
+        background: url('../img/kambala.webp') center bottom no-repeat;
         background-size: 65%;
     }
 
@@ -1087,7 +1087,7 @@ footer .link-menu{grid-area: link-menu;}
         border: 1px solid var(--lines-color);
         border-radius: 12px;
         padding: 42px 12px 8px;
-        background: url(../img/check-icon.png) top 8px left 12px no-repeat;
+        background: url(../img/check-icon.webp) top 8px left 12px no-repeat;
         background-size: 24px;
         font-size: 16px;
     }
@@ -1214,7 +1214,7 @@ footer .link-menu{grid-area: link-menu;}
     .quote-text{
         padding-left: 52px;
         margin-block: 1.5rem;
-        background: url('../img/quote-icon.png') top left no-repeat;
+        background: url('../img/quote-icon.webp') top left no-repeat;
         background-size: 33px;
         font-size: 32px;
     }
@@ -1331,19 +1331,19 @@ footer .link-menu{grid-area: link-menu;}
 
     .first-screen {
         position: relative;
-        background: url('../img/star-icon-18.png') left 30vw top 10vw no-repeat,
-                    url('../img/star-icon-19.png') right 30vw bottom 5vw no-repeat;
+        background: url('../img/star-icon-18.webp') left 30vw top 10vw no-repeat,
+                    url('../img/star-icon-19.webp') right 30vw bottom 5vw no-repeat;
     }
  
   /* ABOUT SCREEN */
     #about-screen{
         position: relative;
         height: calc(75rem + 5vw);
-        background: url(../img/planet.png) right 15% top 8% no-repeat, 
-                    url(../img/line.png) right center no-repeat, 
-                    url(../img/star-icon-1.png) right 10% top 30% no-repeat, 
-                    url(../img/star-icon-2.png) right 26% top 62% no-repeat, 
-                    url(../img/star-icon-3.png) left 20% bottom 25% no-repeat;
+        background: url(../img/planet.webp) right 15% top 8% no-repeat, 
+                    url(../img/line.webp) right center no-repeat, 
+                    url(../img/star-icon-1.webp) right 10% top 30% no-repeat, 
+                    url(../img/star-icon-2.webp) right 26% top 62% no-repeat, 
+                    url(../img/star-icon-3.webp) left 20% bottom 25% no-repeat;
         background-size:  13%, 50%, 2.5%, 2.5%, 4%;
     }
     #about-text-block-1{
@@ -1368,7 +1368,7 @@ footer .link-menu{grid-area: link-menu;}
         margin-top: -5%;
         height: 10%;
         top: -1.5%;
-        background-image: url('../img/binline.png');
+        background-image: url('../img/binline.webp');
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100%;
