@@ -725,6 +725,27 @@ a.underline:hover::before{
     margin-top: 16px;
 }
 
+/* Consent banner  */
+
+#consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    display: none;
+}
+#consent-banner button {
+    margin-left: 15px;
+    padding: 10px;
+}
+
+
+
 
 /* FOOTER  */
 

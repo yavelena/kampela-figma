@@ -8,14 +8,14 @@
   <meta name="description" content="Hardware signer for Polkadot ecosystem" />
   
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N67S442EFL"></script>
+  <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-N67S442EFL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-N67S442EFL');
-  </script>
+  </script>-->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +24,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?2">
   <script src="js/main.js" defer></script>
+  <script src="js/google_analytics_consent.js" defer></script>
   <title>Kampela</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -31,6 +32,17 @@
 
 
 <body>
+
+  <!-- Consent Banner -->
+  <div id="consent-banner">
+    <p>We use cookies to ensure you get the best experience on our website, including Google Analytics. 
+        Do you consent to the use of Google Analytics?
+    </p>
+    <button id="accept-consent">Yes, I consent</button>
+    <button id="reject-consent">No, I don't consent</button>
+  </div>
+
+
   <div class="container">
 
     <!-- TOP MENU MOBILE VERSION-->
@@ -594,7 +606,8 @@
         <span><a href="https://www.zymologia.fi" class="underline" target="_blank" rel="noopener noreferrer">Alzymologist Oy</a>, 2024</span>
         <menu id="terms-policy" class="hmenu">
           <!--<li><a href="#">Terms & Conditions</a></li>-->
-          <li><a href="/privacy-policy">Privicy Policy</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/cookie-policy">Cookie Policy</a></li>
         </menu>
       </div>
 
