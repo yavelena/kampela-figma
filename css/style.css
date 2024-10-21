@@ -760,10 +760,22 @@ footer{
     row-gap: 8rem;
 }
 
+footer .subtitle {
+    margin-bottom: 2rem;
+}
+
 footer .hmenu{
     justify-content: flex-end;
     margin: 0;
     padding: 0;
+}
+
+footer .main-menu{
+    justify-content: inherit;
+}
+
+.ml-embedded{
+    justify-content: flex-end;
 }
 
 .footer-kampela{
